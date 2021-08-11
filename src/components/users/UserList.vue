@@ -46,7 +46,7 @@
                     // props instead of value is used because props is being returned 
                     // We pass in props before any place we reference users
                     users = props.users.filter((usr) =>
-                        usr.fullName.includes(activeSearchTerm.value)
+                        usr.fullName.toLowerCase().includes(activeSearchTerm.value.toLowerCase())
                     );
                 } else if (props.users) {
                     users = props.users;
